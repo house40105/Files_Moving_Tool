@@ -8,6 +8,7 @@ class TestFileConverter(unittest.TestCase):
     
     def tearDown(self):
         pass
+    
     def test_empty(self):
         input_dir = 'none.txt'
         self.assertEqual(None,Files_Moving.move(input_dir))
