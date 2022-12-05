@@ -3,9 +3,18 @@ import Files_Moving
 
     
 class TestFileConverter(unittest.TestCase):
-    def test_convert_success(self):
+    def setUp(self):
+        pass
+    
+    def tearDown(self):
+        pass
+    def test_empty(self):
+        input_dir = 'none.txt'
+        self.assertEqual(None,Files_Moving.move(input_dir))
+        
+    def test_convert(self):
         input_dir = 'files.txt'
-        Files_Moving.move(input_dir)
+        self.assertRaises(TypeError,Files_Moving.move(input_dir))
 
         
 if __name__ == '__main__':
